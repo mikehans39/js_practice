@@ -135,6 +135,52 @@ console.log(sortYears(years))
 
 
 
+// Write your code here:
+
+const justCoolStuff = (string1, string2) => {
+  return string1.filter(word => string2.includes(word));
+}
+
+
+// Feel free to uncomment the code below to test your function
+
+const coolStuff = ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'];
+
+const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway']; 
+
+console.log(justCoolStuff(myStuff, coolStuff))
+// Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
+
+
+
+
+
+// Write your code here:
+
+const isVegan = (food) => {
+    if(food.source === 'plant'){
+      return true;
+    } else {
+      return false; 
+    };
+};
+
+const isTheDinnerVegan = meal => {
+  return meal.every(isVegan);
+}
+
+
+// Feel free to comment out the code below to test your function
+
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+
+console.log(isTheDinnerVegan(dinner))
+// Should print false
+
+
+
+
+
 
 
 
