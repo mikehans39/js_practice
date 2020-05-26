@@ -183,6 +183,91 @@ console.log(isTheDinnerVegan(dinner))
 
 
 
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+
+// Write your code here:
+
+const compare = (a, b) => { 
+  return a.numTeeth > b.numTeeth;
+};
+
+const sortSpeciesByTeeth = list => {
+  return list.sort(compare);
+  /*list.sort(function(a,b) {
+    return a.numTeeth > b.numTeeth;
+  });*/
+}
+
+
+// Feel free to comment out the code below when you're ready to test your function!
+
+console.log(sortSpeciesByTeeth(speciesArray))
+
+// Should print [ { speciesName: 'human', numTeeth: 32 },{ speciesName: 'dog', numTeeth: 42 },{ speciesName: 'shark', numTeeth: 50 },{ speciesName: 'alligator', numTeeth: 80 } ]
+
+
+
+
+
+// Write your code here:
+
+const findMyKeys = list => {
+  if(list.filter(word => word ==='keys')) {
+    return list.indexOf('keys');
+  } else {
+    return -1; 
+  };
+}
+
+
+// Feel free to comment out the code below to test your function
+
+const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+
+console.log(findMyKeys(randomStuff))
+// Should print 4
+
+
+
+
+
+
+// Write your code here:
+
+const dogFactory = (name, breed, weight) => {
+  return {
+      _name: name, 
+      get name() {
+        return this._name;
+      },
+      set name(name) {
+        this._name = name;
+      },
+      _breed: breed, 
+      get breed() {
+        return this._breed;
+      },
+      set breed(breed) {
+        this._breed = breed;
+      }, 
+      _weight: weight,
+      get weight() {
+        return this._weight;
+      },
+      set weight(weight) {
+        this._weight = weight;
+      },
+      bark() {
+        return 'ruff! ruff!';
+      },
+      eatTooManyTreats() {
+        this.weight = this._weight + 1;
+      }
+    };
+}
+
+console.log(dogFactory('Joe', 'Pug', 27))
 
 
 
